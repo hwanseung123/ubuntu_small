@@ -1,0 +1,11 @@
+services:
+    app:
+      build:	
+         context: .
+         dockerfile: ./src/Dockerfile
+
+      image: my-app:latest
+      container_name: docker-go
+      
+      ports:
+       - "8080:8000"
