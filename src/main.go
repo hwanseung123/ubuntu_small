@@ -8,8 +8,7 @@ import (
 
 
 func helloHandler(w http.ResponseWriter, r *http.Request){
-	fmt.Fprint(w,"Github action")
-	
+	fmt.Fprint(w,"Github action test")	
 }
 
 func main(){
