@@ -28,4 +28,15 @@ jobs:
       - name: Setup SSH
         run: | 
             mkdir -p ~/.ssh  
-            echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/
+            echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+            chmod 600 ~/.ssh/id_ed25519
+            echo -e "Host *\n StrictHostKeyChecking no" > ~/.ssh/config
+      - name: Deploy to server
+        run: | 
+            ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
+               docker pull my-app:latest
+               docker stop docker-go
+               docker rm docker-go
+               docker run -d --name docker-go -p 8080:8000 --restart=always my-app:latest 
+               EOF
+
