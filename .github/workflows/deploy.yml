@@ -6,7 +6,8 @@ env:
   TAG: latest
 
 jobs:
-  build:
+  build: 
+# key change
      runs-on: ubuntu-latest      
      steps:
       - name: Checkout code
