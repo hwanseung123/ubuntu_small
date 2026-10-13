@@ -11,15 +11,16 @@ jobs:
      runs-on: ubuntu-latest      
      steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+	# github@checkoutv4 => SHA hash value
+        uses: actions/checkout@uFEFF522d932fae5296da51fdf431934425ecf891c6a2
       
       - name: Login to DockerHub
-        uses: docker/login-action@v3
+        uses: docker/login-action@5e57cd118135c172c3672efd75eb46360885c0ef
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Run Docker compose
-        uses: docker/build-push-actions@v5
+        uses: docker/build-push-actions@2cdde995de11925a030ce8070c3d77a52ffcf1c0
         with:
          context: .
          push: true
