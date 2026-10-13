@@ -10,7 +10,7 @@ jobs:
      runs-on: ubuntu-latest      
      steps:
       - name: Checkout code
-        uses: actions/checkout@uFEFF522d932fae5296da51fdf431934425ecf891c6a2
+        uses: actions/checkout@9422233ca7ee1b17f1e905d0e141faf0c401556c41cdc6acd71c6bd685da2e92
       
       - name: Login to DockerHub
         uses: docker/login-action@5e57cd118135c172c3672efd75eb46360885c0ef
