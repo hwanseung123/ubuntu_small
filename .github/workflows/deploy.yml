@@ -1,10 +1,6 @@
 on:
   push:
      branches: ["main"]
-env:
-  IMAGE_NAME: my-app
-  TAG: latest
-
 jobs:
   build: 
      runs-on: ubuntu-latest      
@@ -17,12 +13,13 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+
       - name: Run Docker compose
         uses: docker/build-push-action@2cdde995de11925a030ce8070c3d77a52ffcf1c0
         with:
          context: .
          push: true
-         tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
+         tags: ${{ secrets.DOCKERHUB_USERNAME }}/my-app:latest 
 
   deploy:
      runs-on: ubuntu-latest
