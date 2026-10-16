@@ -12,8 +12,8 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@5e57cd118135c172c3672efd75eb46360885c0ef
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.TOKEN }}
+          username: ${{ secrets.LINUX_SERVER }}
+          password: ${{ secrets.LINUX_SERVER }}
 
       - name: Run Docker compose
         uses: docker/build-push-action@2cdde995de11925a030ce8070c3d77a52ffcf1c0
