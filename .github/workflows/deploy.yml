@@ -18,8 +18,9 @@ jobs:
         uses: docker/build-push-action@2cdde995de11925a030ce8070c3d77a52ffcf1c0
         with:
          context: .
+         file: ./home/backend/src/Dockerfile 
          push: true
-         tags: jeonhwan144/backend:latest 
+         tags: jeonhwan144/src:latest 
 
   deploy:
      runs-on: ubuntu-latest
