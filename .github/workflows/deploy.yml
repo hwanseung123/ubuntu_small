@@ -17,9 +17,7 @@ jobs:
       - name: Run Docker compose
         uses: docker/build-push-action@2cdde995de11925a030ce8070c3d77a52ffcf1c0
         with:
-	# /home/backend
          context: ./src
-	# /home/backend/src/Dockerfile
          file: ./src/Dockerfile 
          push: true
          tags: jeonhwan144/src:latest 
