@@ -1,11 +1,7 @@
 services:
 
     app:
-      build:	
-         context: ./src
-         dockerfile: Dockerfile
-
-      image: my-app:latest
+      image: jeonhwan144/src:latest
       container_name: docker-go
       
       ports:
