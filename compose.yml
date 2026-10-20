@@ -1,6 +1,6 @@
 services:
-
     app:
+      build: ./src
       image: jeonhwan144/src:latest
       container_name: docker-go
       
