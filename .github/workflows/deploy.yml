@@ -22,6 +22,7 @@ jobs:
          push: true
          tags: jeonhwan144/src:latest 
 
+
   deploy:
      runs-on: ubuntu-latest
      needs: build
@@ -32,4 +33,4 @@ jobs:
 
       - name: Deploy to server
         run: |
-	    docker compose up -d
+            docker compose up -d
