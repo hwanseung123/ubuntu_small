@@ -29,8 +29,8 @@ jobs:
      steps:
       - name: dokcer pull image
         run: |
-            docker compose pull
+            docker compose -f ./compose.yml pull
 
       - name: Deploy to server
         run: |
-            docker compose up -d
+            docker compose -f ./compose.yml up -d
