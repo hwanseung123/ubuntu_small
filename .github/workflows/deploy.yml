@@ -26,7 +26,7 @@ jobs:
      runs-on: ubuntu-latest
      needs: build
      steps:
-      - name: dokcer pull image (image dowanloads)
+      - name: dokcer pull image
 	run: |
             docker compose pull
 
