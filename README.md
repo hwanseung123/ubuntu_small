@@ -11,6 +11,15 @@ https://github.com/WCSCourses/index/blob/main/Docker_guide.md
 
 ------------------------------------------------------------------
 
+Github,Github Action -> Docker hub -> Server restart
+(Delete the existing container and create a new one)
 
+1. read or include the compose.yml file on the server
+
+2. see the image:jeonhwan144/src:latest in the composey.yml file
+
+3. send a network request directly the docker hub server to downloads the latest image(pull)
+
+4. Delete the existing container and create a new container
 
 ![flow](images/image.png)
