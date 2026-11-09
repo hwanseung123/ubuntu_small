@@ -8,3 +8,9 @@ https://github.com/WCSCourses/index/blob/main/Docker_guide.md
 1. sudo usermod -aG docker $USER
 # changed group permissions will take effect immediately
 2. newgrp docker
+
+------------------------------------------------------------------
+
+
+
+![flow](images/image.png)
